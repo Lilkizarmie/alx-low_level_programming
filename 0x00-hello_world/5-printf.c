@@ -1,10 +1,12 @@
-#include <stdio.h>
+#include <unistd.h>
 /**
- * main - main block
- * Return: 0
+ * main - Entry point
+ *
+ * Return: Always 1 (Success)
  */
 int main(void)
 {
-	printf("with proper grammar, but the outcome is a piece of art,\n");
-	return (0);
-}
+	char str1[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	write(2, str1, 59);
+	return (1);
